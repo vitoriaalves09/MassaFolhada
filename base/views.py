@@ -6,23 +6,23 @@ from django.views.generic import TemplateView
 def home(request):
     return render(request. 'home.html')
 '''
-class HomeView(templateView):
+class HomeView(TemplateView):
     template_name = 'home.html'
-class LoginView(templateView):
+class LoginView(TemplateView):
     template_name = 'login.html'
-class AboutView(templateView):
+class AboutView(TemplateView):
     template_name = 'about.html'
-class MenuView(templateView):
+class MenuView(TemplateView):
     template_name = 'menu.html'
-class InformationView(templateView):
+class InformationView(TemplateView):
     template_name = 'information.html'
-class PaymentView(templateView):
+class PaymentView(TemplateView):
     template_name = 'payment.html'
-class TableView(templateView):
+class TableView(TemplateView):
     template_name = 'table.html'
-class ProcedureView(templateView):
+class ProcedureView(TemplateView):
     template_name = 'procedure.html'
-class FinishingView(templateView):
+class FinishingView(TemplateView):
     template_name = 'finishing.html'
-class PersonalDataView(templateView):
+class PersonalDataView(TemplateView):
     template_name = 'personalData.html'
