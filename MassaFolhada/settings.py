@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base',
     'bootstrap5',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
