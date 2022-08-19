@@ -6,20 +6,20 @@ from django.views.generic import TemplateView
 class HomeView(TemplateView):
     template_name = 'pages/home.html'
 class LoginView(TemplateView):
-    template_name = 'login.html'
+    template_name = 'pages/login.html'
 class AboutView(TemplateView):
-    template_name = 'about.html'
+    template_name = 'pages/about.html'
 class MenuView(TemplateView):
-    template_name = 'menu.html'
+    template_name = 'pages/menu.html'
 class InformationView(TemplateView):
-    template_name = 'information.html'
+    template_name = 'pages/information.html'
 class PaymentView(TemplateView):
-    template_name = 'payment.html'
+    template_name = 'pages/payment.html'
 class TableView(TemplateView):
-    template_name = 'table.html'
+    template_name = 'pages/table.html'
 class ProcedureView(TemplateView):
-    template_name = 'procedure.html'
+    template_name = 'pages/procedure.html'
 class FinishingView(TemplateView):
-    template_name = 'finishing.html'
+    template_name = 'pages/finishing.html'
 class PersonalDataView(TemplateView):
-    template_name = 'personalData.html'
+    template_name = 'pages/personalData.html'
