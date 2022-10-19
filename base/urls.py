@@ -3,7 +3,7 @@ from .views import HomeView, LoginView, AboutView, MenuView, InformationView, Pa
 
 urlpatterns = [
     path('start/', HomeView.as_view(), name='start'),
-    path('login/', LoginView.as_view(), name='login'),
+    path('', LoginView.as_view(), name='login'),
     path('about/', AboutView.as_view(), name='about'),
     path('menu/', MenuView.as_view(), name='menu'),
     path('information/', InformationView.as_view(), name='information'),
@@ -13,4 +13,5 @@ urlpatterns = [
     path('finishing/', FinishingView.as_view(), name='finishing'),
     path('personalData/', PersonalDataView.as_view(), name='personalData'),
 
+   
 ]

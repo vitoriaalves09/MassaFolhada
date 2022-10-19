@@ -1,1 +1,40 @@
-<h2>usuario e senha</h2>
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{%load static %}
+{% block conteudo %}
+
+  <section id="register-user">
+    <div class="div-main d-flex text-center align-items-center">
+      <div class="col-lg-6 mx-auto">
+        <h1 class="display-5 fw-bold">Massa Folhada</h1>
+  
+        <form action="{% url 'login' %}" method="POST">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label class="form-label" for="typeText">Nome de Usuário</label>
+            <input
+              type="text"
+              id="typeText"
+              class="form-control"
+              placeholder="usuário..."
+              name="username"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="senha..."
+              name="password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-outline-primary">Entrar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+{% endblock conteudo %}
