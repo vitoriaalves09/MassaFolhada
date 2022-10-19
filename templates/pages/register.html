@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% load static %} {% block conteudo %}
+<section id="register-user">
+  <div class="div-main d-flex text-center align-items-center">
+    <div class="col-lg-6 mx-auto">
+      <h1 class="display-5 fw-bold">Cadastrar Usuário</h1>
+
+      <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label class="form-label" for="typeText">Nome de Usuário</label>
+          <input
+            type="text"
+            id="typeText"
+            class="form-control"
+            placeholder="usuário..."
+            name="username"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="senha..."
+            name="password"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Endereço</label>
+          <input 
+            type="text"
+            class="form-control" 
+            id="inputAddress" 
+            placeholder="1234 Main St"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Cidade</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="inputCity"
+          />
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Cadastrar-me</button>
+        </form>
+      </div>
+    </div>
+  </section>
+{% endblock conteudo %}
+
+
+    

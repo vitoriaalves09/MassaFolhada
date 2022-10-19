@@ -1,5 +1,6 @@
-#from django.shortcuts import render
+from django.shortcuts import render
 from django.views.generic import TemplateView
+
 # Create your views here.
 
 
@@ -23,3 +24,20 @@ class FinishingView(TemplateView):
     template_name = 'pages/finishing.html'
 class PersonalDataView(TemplateView):
     template_name = 'pages/personalData.html'
+
+def register(request):
+    if request.method == 'GET':
+        return render(request, "pages/register.html")
+    
+    else:
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        
+        user = User.objects.filter(username = username).first()   
+        if user:
+            return render(request, "pages/permission.html")
+        
+        user = User.objects.create_user(username=username, email=email, password=password)
+        user.save()
+        return render(request, "pages/home.html")
